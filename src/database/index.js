@@ -12,12 +12,17 @@ function executar(query) {
     pool.get((err, db) => {
       if (err) {
         rejeitar(err);
-        return;
+        
+        console.log("Nao deu1");
+        return ;
       }
 
       db.query(query, (erro, resultado) => {
         if (erro) {
           rejeitar(err);
+            console.log("Nao deu2");
+         
+            console.log(query);
           return;
         }
 
